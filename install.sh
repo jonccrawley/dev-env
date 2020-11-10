@@ -3,9 +3,6 @@
 HOME_DIRECTORY=~
 INSTALLER_REPO=https://github.com/jonccrawley/dev-env.git
 
-if [ -d "$MGT_DIRECTORY" ]; then rm -Rf $MGT_DIRECTORY; fi
-mkdir $MGT_DIRECTORY
-
 # string formatters
 if [[ -t 1 ]]; then
   tty_escape() { printf "\033[%sm" "$1"; }
