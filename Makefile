@@ -9,7 +9,7 @@ force-restore:
 	git fetch
 	echo "" > .Brewfile
 	brew bundle cleanup --force --global
-        git reset --hard origin/master
+	git reset --hard origin/master
 	make restore
 
 git-pull-changes:
