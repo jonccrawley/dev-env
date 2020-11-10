@@ -1,5 +1,5 @@
 
-install: install-homebrew
+install: install-homebrew force-restore 
 restore: brew-cleanup git-pull-changes brew-bundle
 
 install-homebrew:
@@ -8,9 +8,12 @@ install-homebrew:
 force-restore:
 	git fetch
 	echo "" > .Brewfile
-	brew bundle cleanup --force --global	
-	git reset --hard origin/master
-	make restore
+	brew-cleanup	
+	git-reset
+	restore
+
+git-reset:
+	git reset --hard origin/master	
 
 git-pull-changes:
 	git pull origin master
