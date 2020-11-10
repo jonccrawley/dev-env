@@ -1,4 +1,5 @@
 
+PROMPT='%F{blue}%1::>%f '
 
 export VISUAL="code"
 
