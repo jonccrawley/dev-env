@@ -8,8 +8,8 @@ install-homebrew:
 force-restore:
 	git fetch
 	echo "" > .Brewfile
-	brew-cleanup	
-	git-reset
+	make brew-cleanup	
+	make git-reset
 	restore
 
 git-reset:
