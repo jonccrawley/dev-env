@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-MGT_DIRECTORY=~/.env-installer
+HOME_DIRECTORY=~
 INSTALLER_REPO=https://github.com/jonccrawley/dev-env.git
-
-
 
 if [ -d "$MGT_DIRECTORY" ]; then rm -Rf $MGT_DIRECTORY; fi
 mkdir $MGT_DIRECTORY
@@ -60,7 +58,7 @@ execute() {
 ##################################################################################################
 ohai "Downloading installer codebase..."
 (
-  cd $MGT_DIRECTORY >/dev/null || return
+  cd $HOME_DIRECTORY >/dev/null || return
  	
   # we do it in four steps to avoid merge errors when reinstalling
   execute "git" "init" "-q"
